@@ -159,9 +159,12 @@ input {
 }
 
 .brand-mark {
-  color: var(--solid);
+  width: 28px;
+  height: 28px;
   flex: none;
+  display: block;
   border-radius: 7px;
+  object-fit: cover;
 }
 
 .nav-check {
@@ -420,6 +423,8 @@ input {
   height: 48px;
   margin: 0 0 14px;
   border-radius: 12px;
+  object-fit: cover;
+  display: block;
 }
 
 .split {
