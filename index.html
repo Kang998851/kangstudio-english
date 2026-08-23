@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KangStudio English · 桌面英语学习软件</title>
-  <meta name="description" content="做题时双击单词，自动记为不清楚的词汇。KangStudio English：全英试卷、交卷红标、翻牌复习、4000+ 题库。Mac / Windows，7 天试用。">
+  <meta name="description" content="做题时双击单词，自动记为不清楚的词汇。翻译可当场弹出，也可交卷后再看。KangStudio English：全英试卷、翻牌复习、4000+ 题库。Mac / Windows，7 天试用。">
   <link rel="canonical" href="https://kang998851.github.io/kangstudio-english/">
   <link rel="icon" href="favicon.png" type="image/png" sizes="64x64">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -44,23 +44,23 @@
     <section class="hero" id="top">
       <p class="eyebrow">The buy point</p>
       <h1>做题时双击单词，自动记成你不会的词。</h1>
-      <p class="lede">试卷全英。读到不清楚的词，双击即收入生词本——不用切词典、不用划线菜单。交卷后这些词在缩略卷面上红标，再翻成卡片复习。这是 KangStudio English 的买点。</p>
+      <p class="lede">试卷全英。读到不清楚的词，双击即收入生词本——不用切词典、不用划线菜单。翻译时机你自己选：做卷时立刻弹出，或交卷后再显示。交卷后这些词在缩略卷面上红标，再翻成卡片复习。</p>
       <div class="hero-actions">
         <a class="btn btn-solid" href="#buy">试一下双击</a>
         <a class="btn btn-ghost" href="#download">下载 Mac 版</a>
       </div>
       <ul class="pills">
         <li>双击 → 不清楚的词汇</li>
+        <li>翻译时机可自选</li>
         <li>交卷红标回看</li>
         <li>翻牌复习</li>
-        <li>7 天免费试用</li>
       </ul>
     </section>
 
     <section class="section" id="buy">
-      <div class="split">
+      <div class="split split-top">
         <div class="chrome">
-          <div class="chrome-bar"><i></i><i></i><i></i><span>Exam · Double-click any word</span></div>
+          <div class="chrome-bar"><i></i><i></i><i></i><span id="demo-chrome-label">Exam · Double-click any word</span></div>
           <div class="chrome-body">
             <article class="exam-paper" id="demo-paper">
               <p class="meta">Paper 1284 · Long set · 30 min</p>
@@ -74,8 +74,24 @@
         <div class="split-copy">
           <p class="eyebrow">Buy point</p>
           <h2>双击，就是「我不会」。</h2>
-          <p>做题不停下来查词典。鼠标双击那个词，软件自动记为不清楚的词汇，并带上原句。节奏还在卷面上。</p>
-          <p>这段试卷可以当场试：双击 <em>unprecedented</em>、<em>households</em> 或任何一个英文词，看它如何被标红、列入生词。</p>
+          <p>做题不停下来查词典。鼠标双击那个词，软件自动记为不清楚的词汇，并带上原句。要不要当场看中文，还是交卷后再看，设置里自行选择。</p>
+          <p>这段试卷可以当场试：双击 <em>unprecedented</em>、<em>households</em> 或任何一个英文词。下面两个开关和软件设置一致。</p>
+          <div class="pref-stack" id="demo-prefs">
+            <button type="button" class="pref" data-pref="instant" aria-pressed="false">
+              <span>
+                <span class="pref-label">做卷时双击单词立即显示翻译</span>
+                <span class="pref-hint">开：立刻弹出中文释义。关：做题过程中不显示翻译。</span>
+              </span>
+              <span class="pref-switch" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="pref is-on" data-pref="after" aria-pressed="true">
+              <span>
+                <span class="pref-label">卷后显示翻译</span>
+                <span class="pref-hint">开：交卷后在红标与翻牌中显示释义。关：卷后也不公布翻译。</span>
+              </span>
+              <span class="pref-switch" aria-hidden="true"></span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -195,7 +211,7 @@
           <p class="eyebrow">After the paper</p>
           <h2>交卷后，这些词红标、翻牌。</h2>
           <p>双击记下的不清楚词汇，会出现在缩略卷面上，用红色标出。然后变成卡片：正面英文，背面中文释义和原句。悬停翻转，进入间隔复习。</p>
-          <p>做题时只双击、不打断；讲词发生在交卷之后。</p>
+          <p>翻译出现的时机由你决定：做卷时双击立刻弹出，或等交卷后再显示。两项可单独开关。默认做卷不弹译，交卷后才看释义。</p>
         </div>
         <div class="cards-row" aria-hidden="true">
           <div class="flip">
@@ -464,6 +480,10 @@
         <details open>
           <summary>双击生词是怎么工作的？</summary>
           <p>做题时双击试卷上的任意英文单词，软件立刻把它记为不清楚的词汇，并保存原句。不用打开词典、不用另做笔记。交卷后这些词在缩略卷面红标，再进入翻牌复习。</p>
+        </details>
+        <details>
+          <summary>翻译什么时候出现？</summary>
+          <p>设置里有两项，可单独开关：<strong>做卷时双击单词立即显示翻译</strong>，以及<strong>卷后显示翻译</strong>。前者开则当场弹出中文释义；后者开则交卷后在缩略卷面与生词翻牌里显示释义。默认关前者、开后者，避免做题时被中文打断。</p>
         </details>
         <details>
           <summary>这和 Kang Learn 是同一个软件吗？</summary>
