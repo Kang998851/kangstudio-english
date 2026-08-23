@@ -834,49 +834,6 @@ input {
   gap: 16px;
 }
 
-.price-switch {
-  display: inline-flex;
-  margin: 0 0 24px;
-  padding: 4px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--bg-elevated);
-}
-
-.price-switch label {
-  min-width: 88px;
-  padding: 8px 18px;
-  border-radius: 999px;
-  color: var(--muted);
-  font-size: 14px;
-  text-align: center;
-  cursor: pointer;
-}
-
-#mode-annual:checked ~ .price-switch label[for="mode-annual"],
-#mode-buyout:checked ~ .price-switch label[for="mode-buyout"] {
-  background: var(--solid);
-  color: var(--solid-text);
-}
-
-.price-pane {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.price-pane-buyout {
-  display: none;
-}
-
-#mode-buyout:checked ~ .pricing-grid .price-pane-annual {
-  display: none;
-}
-
-#mode-buyout:checked ~ .pricing-grid .price-pane-buyout {
-  display: flex;
-}
-
 .price-foot {
   margin-top: 28px;
 }
@@ -900,7 +857,7 @@ input {
 .price-list {
   display: grid;
   gap: 10px;
-  margin: 0 0 28px;
+  margin: 0 0 20px;
   padding: 0;
   list-style: none;
 }
@@ -918,14 +875,67 @@ input {
 .price-list strong {
   color: var(--text);
   font-family: var(--display);
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
 }
 
-.price-actions {
+.price-plans {
   display: grid;
-  gap: 8px;
-  margin-top: auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: auto 0 12px;
+}
+
+.price-plan {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+}
+
+.price-plan.is-lead {
+  border-color: #4a4a4a;
+}
+
+.card .price-plan-kicker {
+  color: var(--faint);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.price-plan-sum {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  margin: 8px 0 6px;
+  color: var(--text);
+}
+
+.price-plan-sum strong {
+  font-family: var(--display);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.price-plan-sum span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.card .price-plan-note {
+  flex: 1;
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.price-card > .btn {
+  margin-top: 4px;
 }
 
 .featured {
@@ -1121,6 +1131,7 @@ code {
   .split,
   .footer-grid,
   .pricing-grid,
+  .price-plans,
   .steps,
   .cards-row {
     grid-template-columns: 1fr;
