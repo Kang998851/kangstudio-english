@@ -1,0 +1,19 @@
+{
+  "version": "0.1.0",
+  "updated": "2026-08-23",
+  "apps": [
+    {
+      "id": "english",
+      "name": "KangStudio English",
+      "version": "0.1.0",
+      "platforms": {
+        "mac-arm64": {
+          "file": "KangStudio-English-0.1.0-arm64.dmg",
+          "size": 113343785,
+          "label": "Mac (Apple silicon) · DMG",
+          "url": "https://github.com/Kang998851/kang998851.github.io/releases/download/v0.1.0-english/KangStudio-English-0.1.0-arm64.dmg"
+        }
+      }
+    }
+  ]
+}
