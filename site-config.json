@@ -3,8 +3,11 @@
   "taobaoHint": "在淘宝搜索「KangStudio English」购买授权码",
   "supportEmail": "support@kangstudio.example",
   "pricing": {
-    "proBuyout": 398,
+    "proAnnual": 198,
     "maxAnnual": 348,
-    "maxBuyout": 698
+    "proBuyout": 398,
+    "maxBuyout": 698,
+    "proAiPack": 128,
+    "maxAiPack": 228
   }
 }
