@@ -385,70 +385,81 @@
         <p>淘宝买卡，人民币，一张卡绑一台电脑。年费含题库更新和 AI。买断是当前这个大版本一直能用，AI 只含第一年。</p>
       </div>
 
-      <p class="price-lane">年费</p>
-      <div class="pricing-grid">
-        <article class="card price-card featured">
-          <p class="card-kicker">Pro · 年费</p>
-          <h3>分级题库</h3>
-          <p class="price-note">4000+ 套卷，装在电脑里，一张卡一台机</p>
-          <ul class="price-list">
-            <li><span>年费</span><strong>¥198/年</strong></li>
-            <li><span>短 / 长 / 超长</span><strong>全部解锁</strong></li>
-            <li><span>试用</span><strong>7 天</strong></li>
-            <li><span>新闻 AI 卷</span><strong>不含</strong></li>
-          </ul>
-          <div class="price-actions">
-            <a class="btn btn-ghost btn-block" href="#download">先下载试用</a>
-            <a class="btn btn-solid btn-block buy-link" id="buy-pro" href="#" rel="noopener">淘宝购买 Pro 年费</a>
-          </div>
-        </article>
-        <article class="card price-card featured">
-          <p class="card-kicker">Max · 年费</p>
-          <h3>新闻 + AI 出题</h3>
-          <p class="price-note">含 Pro 全部内容，外加新闻卷</p>
-          <ul class="price-list">
-            <li><span>年费</span><strong>¥348/年</strong></li>
-            <li><span>Pro 题库</span><strong>包含</strong></li>
-            <li><span>新闻卷</span><strong>Max 独家</strong></li>
-            <li><span>AI 出题</span><strong>跟着年费走</strong></li>
-          </ul>
-          <div class="price-actions">
-            <a class="btn btn-ghost btn-block" href="#download">先下载试用</a>
-            <a class="btn btn-solid btn-block buy-link" id="buy-max" href="#" rel="noopener">淘宝购买 Max 年费</a>
-          </div>
-        </article>
-      </div>
+      <div class="price-board">
+        <input class="sr-only" type="radio" name="price-mode" id="mode-annual" checked>
+        <input class="sr-only" type="radio" name="price-mode" id="mode-buyout">
+        <div class="price-switch">
+          <label for="mode-annual">年费</label>
+          <label for="mode-buyout">买断</label>
+        </div>
 
-      <p class="price-lane">买断</p>
-      <div class="pricing-grid">
-        <article class="card price-card">
-          <p class="card-kicker">Pro · 买断</p>
-          <h3>当前大版本</h3>
-          <p class="price-note">当前这个大版本可以一直用</p>
-          <ul class="price-list">
-            <li><span>买断</span><strong>¥398</strong></li>
-            <li><span>题库</span><strong>本版本内可用</strong></li>
-            <li><span>AI</span><strong>不含</strong></li>
-          </ul>
-          <div class="price-actions">
-            <a class="btn btn-ghost btn-block buy-link" href="#" rel="noopener">淘宝购买 Pro 买断</a>
-          </div>
-        </article>
-        <article class="card price-card">
-          <p class="card-kicker">Max · 买断</p>
-          <h3>当前大版本 + 第一年 AI</h3>
-          <p class="price-note">大版本一直能用，AI 只含第一年</p>
-          <ul class="price-list">
-            <li><span>买断</span><strong>¥698</strong></li>
-            <li><span>Pro 题库</span><strong>包含</strong></li>
-            <li><span>AI</span><strong>仅首年</strong></li>
-          </ul>
-          <div class="price-actions">
-            <a class="btn btn-ghost btn-block buy-link" href="#" rel="noopener">淘宝购买 Max 买断</a>
-          </div>
-        </article>
+        <div class="pricing-grid">
+          <article class="card price-card featured">
+            <p class="card-kicker">Pro</p>
+            <div class="price-pane price-pane-annual">
+              <h3>分级题库</h3>
+              <p class="price-note">4000+ 套卷，装在电脑里，一张卡一台机</p>
+              <ul class="price-list">
+                <li><span>年费</span><strong>¥198/年</strong></li>
+                <li><span>短 / 长 / 超长</span><strong>全部解锁</strong></li>
+                <li><span>试用</span><strong>7 天</strong></li>
+                <li><span>新闻 AI 卷</span><strong>不含</strong></li>
+              </ul>
+              <div class="price-actions">
+                <a class="btn btn-ghost btn-block" href="#download">先下载试用</a>
+                <a class="btn btn-solid btn-block buy-link" id="buy-pro" href="#" rel="noopener">淘宝购买 Pro 年费</a>
+              </div>
+            </div>
+            <div class="price-pane price-pane-buyout">
+              <h3>当前大版本</h3>
+              <p class="price-note">当前这个大版本可以一直用，不含 AI</p>
+              <ul class="price-list">
+                <li><span>买断</span><strong>¥398</strong></li>
+                <li><span>题库</span><strong>本版本内可用</strong></li>
+                <li><span>试用</span><strong>7 天</strong></li>
+                <li><span>AI</span><strong>不含</strong></li>
+              </ul>
+              <div class="price-actions">
+                <a class="btn btn-ghost btn-block" href="#download">先下载试用</a>
+                <a class="btn btn-solid btn-block buy-link" id="buy-pro-buyout" href="#" rel="noopener">淘宝购买 Pro 买断</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card price-card featured">
+            <p class="card-kicker">Max</p>
+            <div class="price-pane price-pane-annual">
+              <h3>新闻 + AI 出题</h3>
+              <p class="price-note">含 Pro 全部内容，外加新闻卷</p>
+              <ul class="price-list">
+                <li><span>年费</span><strong>¥348/年</strong></li>
+                <li><span>Pro 题库</span><strong>包含</strong></li>
+                <li><span>新闻卷</span><strong>Max 独家</strong></li>
+                <li><span>AI 出题</span><strong>跟着年费走</strong></li>
+              </ul>
+              <div class="price-actions">
+                <a class="btn btn-ghost btn-block" href="#download">先下载试用</a>
+                <a class="btn btn-solid btn-block buy-link" id="buy-max" href="#" rel="noopener">淘宝购买 Max 年费</a>
+              </div>
+            </div>
+            <div class="price-pane price-pane-buyout">
+              <h3>当前大版本 + 第一年 AI</h3>
+              <p class="price-note">大版本一直能用，AI 只含第一年</p>
+              <ul class="price-list">
+                <li><span>买断</span><strong>¥698</strong></li>
+                <li><span>Pro 题库</span><strong>包含</strong></li>
+                <li><span>试用</span><strong>7 天</strong></li>
+                <li><span>AI</span><strong>仅第一年</strong></li>
+              </ul>
+              <div class="price-actions">
+                <a class="btn btn-ghost btn-block" href="#download">先下载试用</a>
+                <a class="btn btn-solid btn-block buy-link" id="buy-max-buyout" href="#" rel="noopener">淘宝购买 Max 买断</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="lede price-foot">第二年要继续用 AI，买 <strong>AI 续航包</strong>（Pro ¥128 / Max ¥228），或者改成年费。未满 18 岁须由监护人付款。</p>
       </div>
-      <p class="lede" style="margin-top:28px">第二年要继续用 AI，买 <strong>AI 续航包</strong>（Pro ¥128 / Max ¥228），或者改成年费。未满 18 岁须由监护人付款。</p>
     </section>
 
     <section class="section" id="download">
