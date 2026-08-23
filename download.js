@@ -23,26 +23,26 @@
         }
         if (win && winBtn && (win.url || win.file)) {
           winBtn.href = win.url || new URL(`downloads/${win.file}`, document.baseURI).href;
-          winBtn.textContent = "Download for Windows";
+          winBtn.textContent = "下载 Windows 版";
           winBtn.removeAttribute("aria-disabled");
           winBtn.classList.remove("is-disabled");
         } else if (winBtn) {
-          winBtn.textContent = "Windows — 即将推出";
+          winBtn.textContent = "Windows 还在打包";
         }
         if (note && app) {
           const parts = [`Version ${app.version}`];
           if (mac?.size) parts.push(`Mac · ${formatSize(mac.size)}`);
           if (win?.size) parts.push(`Windows · ${formatSize(win.size)}`);
-          note.textContent = parts.length > 1 ? parts.join(" · ") : "安装包尚未发布。";
+          note.textContent = parts.length > 1 ? parts.join(" · ") : "安装包还没放上来。";
         } else if (note) {
-          note.textContent = "安装包尚未发布。";
+          note.textContent = "安装包还没放上来。";
         }
       });
     })
     .catch(() => {
       cards.forEach((card) => {
         const note = card.querySelector("[data-download-note]");
-        if (note) note.textContent = "下载链接加载失败，请刷新页面。";
+        if (note) note.textContent = "下载链接没加载出来，刷新一下。";
       });
     });
 
