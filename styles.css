@@ -465,6 +465,8 @@ input {
   font-size: 16.5px;
   line-height: 1.95;
   color: var(--text);
+  cursor: text;
+  user-select: text;
 }
 
 .exam-paper .meta {
@@ -474,6 +476,14 @@ input {
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.exam-paper .stem {
+  margin-top: 14px;
+}
+
+.exam-paper ::selection {
+  background: rgba(194, 59, 59, 0.35);
 }
 
 .word {
@@ -492,6 +502,53 @@ input {
   color: var(--muted);
   font-family: var(--sans);
   font-size: 13px;
+}
+
+.toast.is-saved {
+  border-color: #3a3a3a;
+  color: var(--text);
+}
+
+.saved-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.saved-words[hidden] {
+  display: none;
+}
+
+.saved-words li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  font-size: 13px;
+}
+
+.saved-words strong {
+  font-family: var(--display);
+  letter-spacing: -0.03em;
+}
+
+.saved-words span {
+  color: var(--ultra);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.split-copy em {
+  font-style: normal;
+  color: var(--text);
+  font-family: var(--serif);
 }
 
 .cards-row {
