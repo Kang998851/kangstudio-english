@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KangStudio English · 桌面英语学习软件</title>
-  <meta name="description" content="KangStudio English 是独立的桌面英语学习软件：4000+ 分级真题、日历短测/长测/超长测、双击生词翻牌、段位 RP。Mac / Windows，7 天试用，淘宝购卡激活。">
+  <meta name="description" content="做题时双击单词，自动记为不清楚的词汇。KangStudio English：全英试卷、交卷红标、翻牌复习、4000+ 题库。Mac / Windows，7 天试用。">
   <link rel="canonical" href="https://kang998851.github.io/kangstudio-english/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,8 +33,8 @@
       </label>
 
       <nav class="nav" aria-label="本页">
+        <a href="#buy">双击生词</a>
         <a href="#exams">测种</a>
-        <a href="#vocab">生词</a>
         <a href="#ranks">段位</a>
         <a href="#pricing">定价</a>
         <a class="btn btn-solid btn-sm" href="#download">下载试用</a>
@@ -44,20 +44,42 @@
 
   <main id="main">
     <section class="hero" id="top">
-      <p class="eyebrow">Desktop English · Independent product</p>
-      <h1>每天用世界新闻，练真正的英语。</h1>
-      <p class="lede">KangStudio English 是一套独立的桌面软件，不是套件站里的 Learn，也不是网页课。短测 8–12 分钟、长测约 30 分钟、超长测约 55 分钟；做题全英，双击生词，交卷翻牌，错题先讲后重做。数据保存在你的电脑上。</p>
+      <p class="eyebrow">The buy point</p>
+      <h1>做题时双击单词，自动记成你不会的词。</h1>
+      <p class="lede">试卷全英。读到不清楚的词，双击即收入生词本——不用切词典、不用划线菜单。交卷后这些词在缩略卷面上红标，再翻成卡片复习。这是 KangStudio English 的买点。</p>
       <div class="hero-actions">
-        <a class="btn btn-solid" href="#download">下载 Mac 版</a>
-        <a class="btn btn-ghost" href="#pricing">查看定价</a>
+        <a class="btn btn-solid" href="#buy">试一下双击</a>
+        <a class="btn btn-ghost" href="#download">下载 Mac 版</a>
       </div>
       <ul class="pills">
+        <li>双击 → 不清楚的词汇</li>
+        <li>交卷红标回看</li>
+        <li>翻牌复习</li>
         <li>7 天免费试用</li>
-        <li>Pro 4000+ 精选题库</li>
-        <li>Max 实事新闻卷</li>
-        <li>一码一机</li>
-        <li>Mac · Windows</li>
       </ul>
+    </section>
+
+    <section class="section" id="buy">
+      <div class="split">
+        <div class="chrome">
+          <div class="chrome-bar"><i></i><i></i><i></i><span>Exam · Double-click any word</span></div>
+          <div class="chrome-body">
+            <article class="exam-paper" id="demo-paper">
+              <p class="meta">Paper 1284 · Long set · 30 min</p>
+              <p>Central banks moved with unusual speed this week, arguing that inflation had not yet loosened its grip. Analysts said the decision was unprecedented in peacetime, and that households would feel the delay between policy and prices.</p>
+              <p class="stem">Which statement best captures the author’s attitude toward the delay?</p>
+            </article>
+            <p class="toast" id="demo-toast">在这段英文上双击任意单词，会立刻记入不清楚的词汇。</p>
+            <ul class="saved-words" id="demo-saved" hidden></ul>
+          </div>
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Buy point</p>
+          <h2>双击，就是「我不会」。</h2>
+          <p>做题不停下来查词典。鼠标双击那个词，软件自动记为不清楚的词汇，并带上原句。节奏还在卷面上。</p>
+          <p>这段试卷可以当场试：双击 <em>unprecedented</em>、<em>households</em> 或任何一个英文词，看它如何被标红、列入生词。</p>
+        </div>
+      </div>
     </section>
 
     <section class="section" id="story">
@@ -169,35 +191,13 @@
       </div>
     </section>
 
-    <section class="section" id="paper">
-      <div class="split">
-        <div class="chrome" aria-hidden="true">
-          <div class="chrome-bar"><i></i><i></i><i></i><span>Reading · Full English</span></div>
-          <div class="chrome-body">
-            <article class="exam-paper">
-              <p class="meta">Paper 1284 · Long set · 30 min</p>
-              <p>Central banks moved with unusual speed this week, arguing that inflation had not yet loosened its grip. Analysts said the decision was <span class="word">unprecedented</span> in peacetime, and that households would feel the delay between policy and prices.</p>
-              <p style="margin-top:14px">Which statement best captures the author’s attitude toward the delay?</p>
-            </article>
-            <p class="toast">Double-click a word to save it · unprecedented</p>
-          </div>
-        </div>
-        <div class="split-copy">
-          <p class="eyebrow">Exam</p>
-          <h2>做题时，界面只有英语。</h2>
-          <p>阅读、填空、应用文都在同一份卷里。文章用衬线体排版，接近纸质试卷。你读不懂某个词，双击即可收录，不必切出词典打断节奏。</p>
-          <p>难度不是随便点选。段位低时只派简单卷；升星之后才会遇到更长的句子和更绕的推断。</p>
-        </div>
-      </div>
-    </section>
-
     <section class="section band full-bleed" id="vocab">
       <div class="split">
         <div class="split-copy">
-          <p class="eyebrow">Vocab cards</p>
-          <h2>交卷之后，生词翻转入袋。</h2>
-          <p>这是软件的买点：双击记下的词，会在结果页变成卡片。正面是英文，背面是中文释义和原句。悬停或点击即可翻转，然后进入间隔复习。</p>
-          <p>不会的词会在缩略卷面上用红色标出，方便你回头看自己卡在哪一句。</p>
+          <p class="eyebrow">After the paper</p>
+          <h2>交卷后，这些词红标、翻牌。</h2>
+          <p>双击记下的不清楚词汇，会出现在缩略卷面上，用红色标出。然后变成卡片：正面英文，背面中文释义和原句。悬停翻转，进入间隔复习。</p>
+          <p>做题时只双击、不打断；讲词发生在交卷之后。</p>
         </div>
         <div class="cards-row" aria-hidden="true">
           <div class="flip">
@@ -432,6 +432,10 @@
       </div>
       <div class="faq">
         <details open>
+          <summary>双击生词是怎么工作的？</summary>
+          <p>做题时双击试卷上的任意英文单词，软件立刻把它记为不清楚的词汇，并保存原句。不用打开词典、不用另做笔记。交卷后这些词在缩略卷面红标，再进入翻牌复习。</p>
+        </details>
+        <details>
           <summary>这和 Kang Learn 是同一个软件吗？</summary>
           <p>不是。Kang Learn 仍是套件里的学习规划软件。KangStudio English 是完全独立的英语刷题产品，有自己的题库、日历测种和段位。</p>
         </details>
@@ -464,6 +468,7 @@
       <div>
         <h2>本站</h2>
         <ul>
+          <li><a href="#buy">双击生词</a></li>
           <li><a href="#exams">测种</a></li>
           <li><a href="#pricing">定价</a></li>
           <li><a href="#download">下载</a></li>
@@ -486,6 +491,7 @@
   </footer>
 
   <script src="download.js"></script>
+  <script src="demo.js"></script>
   <script>
     fetch("site-config.json")
       .then((r) => r.json())
