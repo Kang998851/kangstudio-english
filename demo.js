@@ -84,7 +84,7 @@
     }
     saved.forEach((word) => {
       const item = document.createElement("li");
-      const tag = prefs.after ? gloss(word) : "不清楚";
+      const tag = prefs.after ? gloss(word) : "生词";
       item.innerHTML = `<strong>${word}</strong><span>${tag}</span>`;
       list.appendChild(item);
     });
@@ -98,8 +98,8 @@
         : "Exam · Double-click any word";
     }
     toast.textContent = prefs.instant
-      ? "双击任意单词，立刻弹出中文释义，并记入生词。"
-      : "在这段英文上双击任意单词，会立刻记入不清楚的词汇。";
+      ? "双击单词会马上弹出中文，并记进生词。"
+      : "在这段英文上双击任意单词，会记进生词。";
     toast.classList.remove("is-saved");
   }
 
@@ -124,7 +124,7 @@
     if (saved.some((w) => w.toLowerCase() === key)) {
       toast.textContent = prefs.instant
         ? `${hit.word} · ${gloss(hit.word)}`
-        : `Already saved · ${hit.word}`;
+        : `已经记过 · ${hit.word}`;
       toast.classList.add("is-saved");
       return;
     }
@@ -132,7 +132,7 @@
     wrap(hit);
     toast.textContent = prefs.instant
       ? `${hit.word} · ${gloss(hit.word)}`
-      : `Saved · ${hit.word} · 已记为不清楚的词汇`;
+      : `已记下 · ${hit.word}`;
     toast.classList.add("is-saved");
     renderList();
   });
