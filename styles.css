@@ -312,6 +312,11 @@ input {
   font-size: 17px;
 }
 
+.lede strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -747,6 +752,18 @@ input {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+}
+
+.price-lane {
+  margin: 36px 0 14px;
+  color: var(--faint);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.price-lane:first-of-type {
+  margin-top: 0;
 }
 
 .price-card {
